@@ -35,20 +35,3 @@
 //   price = "Ты проиграл чёрт"
 // }
 
-const  stars =  Math.round(Math.random() * ( 70 - 20 ) + 20 ) ; 
-
-let price ; 
-
-
-if ( stars >= 20 &&  stars <= 30) {
-    price = 'ну ты чистый конченный полупокерный выпердеж шакала,чистый  нол ёбанный'
-} else if  (stars <= 40) {
-    price = 'ты как быы  и лох и как бы не очень, фуцишка вообщем по нашему'
-} else if ( stars <= 70 ) {
-    price = `ебать огромный прайс : ${stars}`
-} else {
- console.log(`Ты ебаный крендель и прайс твой равен : `, stars )
-}
-
-
-console.log(price);
