@@ -225,25 +225,105 @@
 
 
 
-const products = [
-  { name: "Radar", price: 1300, quantity: 4 },
-  { name: "Scanner", price: 2700, quantity: 3 },
-  { name: "Droid", price: 400, quantity: 7 },
-  { name: "Grip", price: 1200, quantity: 9 },
-];
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
 
-function calculateTotalPrice(productName) {
+// function calculateTotalPrice(productName) {
  
 
-    for (const product of products) {
-        if (product.name === productName) {
-            return product.price * product.quantity;
-        }
-    }
-}
+//     for (const product of products) {
+//         if (product.name === productName) {
+//             return product.price * product.quantity;
+//         }
+//     }
+// }
 
-calculateTotalPrice("Radar")  
-calculateTotalPrice("Droid")  
-calculateTotalPrice("Grip")  
-calculateTotalPrice("Scanner")
+// calculateTotalPrice("Radar")
+// calculateTotalPrice("Droid")
+// calculateTotalPrice("Grip")
+// calculateTotalPrice("Scanner")
+
+// function add(...args) {
+// let sum = 0
+// for ( const  arg of [...args]) {
+//     sum += arg
+    
+// }
+//   return sum
+// }
+
+
+    
+
+//  console.log(add(15, 27) )
+//  add(12, 4, 11, 48)
+//  add(32, 6, 13, 19, 8)
+//  add(74, 11, 62, 46, 12, 36)
+
+
+
+
+
+// function findMatches(a , ...prop) {
+//   const matches = [];
+//     for (const num of prop) {
+//       for ( const b of a)
+//         if (num === b) {
+//             console.log(num)
+//         }
+// }
+
+//   return matches;
+// }
+
+
+
+
+
+// findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7)
+// findMatches([15, 25, 37, 42, 5], 14, 87 ,22, 37)
+// findMatches([1, 2, 3, 4, 57], 10, 80, 20, 7)
+// findMatches([11, 21, 31, 41, 5], 1, 8, 2, 7)
+// findMatches([111, 20, 30, 4, 5], 111, 80, 20, 7)
+// findMatches([17, 21, 3, 4, 221,  5], 17, 8, 221, 7)
+
+
+
+
+
+
+// const atTheOldToad = {
+//     potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//     removePotion(potionName) {
+   
+//         for (const potion of this.potions) {
+//             if (potion === potionName) {
+//                 this.potions.splice(potion, 1)
+//                 return this.potions
+//             }
+//         }
+//     }
+// }
+
+// // console.log(atTheOldToad.potions)
+
+
+// console.log(atTheOldToad.removePotion("Speed potion"))
+// console.log(atTheOldToad.removePotion("Dragon breath"))
+
+
+
+
+
+
+
+
+
+
+
+
 
