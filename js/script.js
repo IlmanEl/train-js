@@ -317,25 +317,97 @@
 
 
 
-const doMath = function (a, b, callback) {
-    const result = callback(a, b);
+// const doMath = function (a, b, callback) {
+//     const result = callback(a, b);
 
-    console.log(result);
+//     console.log(result);
 
-};
+// };
 
-const add = function (x, y) {
-    return x + y;
+// const add = function (x, y) {
+//     return x + y;
 
-};
+// };
 
-const sub = function (x, y) {
-    return x - y
+// const sub = function (x, y) {
+//     return x - y
     
-};
+// };
 
-doMath(2, 3, add);
-doMath(10, 8, sub);
+// doMath(2, 3, add);
+// doMath(10, 8, sub);
+
+
+
+
+
+// const rounder = function (places) {
+    
+//     return function (number) {
+//         return Number(number.toFixed(places))
+//     };
+// };
+
+// const rounder2 = rounder(2);
+// const rounder3 = rounder(3);
+
+// console.log(rounder2(3.45322));
+// console.log(rounder3(9.5442));
+// console.log(rounder2(1.22));
+// console.log(rounder2(3.35445322));
+// console.log(rounder3(23.453251));
+// console.log(rounder3(5.453290));
+
+
+
+
+
+const numbers = [0, 5, 10, 15, 12, 14, 45, 78];
+console.log(numbers);
+
+const total = numbers.reduce((acc, number) => acc + number, 0);
+
+console.log(total);
+
+
+const finder = numbers.find(number => number > 36);
+
+
+console.log(finder);
+
+
+
+
+const filtered = numbers.filter(number => number > 36);
+
+console.log(filtered);
+
+
+
+
+const maped = numbers.map(number => number/ 2 );
+
+
+console.log(maped);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
