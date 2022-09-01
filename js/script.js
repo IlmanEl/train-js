@@ -362,37 +362,33 @@
 
 
 
-const numbers = [0, 5, 10, 15, 12, 14, 45, 78];
-console.log(numbers);
+// const numbers = [0, 5, 10, 15, 12, 14, 45, 78];
+// console.log(numbers);
 
-const total = numbers.reduce((acc, number) => acc + number, 0);
+// const total = numbers.reduce((acc, number) => acc + number, 0);
 
-console.log(total);
-
-
-const finder = numbers.find(number => number > 36);
+// console.log(total);
 
 
-console.log(finder);
+// const finder = numbers.find(number => number > 36);
 
 
-
-
-const filtered = numbers.filter(number => number > 36);
-
-console.log(filtered);
+// console.log(finder);
 
 
 
 
-const maped = numbers.map(number => number/ 2 );
+// const filtered = numbers.filter(number => number > 36);
+
+// console.log(filtered);
 
 
-console.log(maped);
 
 
+// const maped = numbers.map(number => number/ 2 );
 
 
+// console.log(maped);
 
 
 
