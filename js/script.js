@@ -514,11 +514,12 @@ const titleEl = document.createElement('h1');
 titleEl.classList.add('page-title');
 titleEl.textContent = 'لَآ أَعْبُدُ مَا تَعْبُدُونَ';
 console.log(titleEl);
-document.body.appendChild(titleEl);
+
 const imageEl = document.createElement('img');
 imageEl.width = 300;
 
 imageEl.src = '	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YePj_yrMUR-89tpxdx7lRvdfszNwosSlvw&usqp=CAU'
-document.body.appendChild(imageEl);
+// document.body.appendChild(imageEl);
 
-
+// document.body.appendChild(titleEl);
+document.body.append(imageEl, titleEl)
