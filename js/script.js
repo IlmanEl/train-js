@@ -452,26 +452,73 @@
 
 
 
-function getCommonElements(firstArray, secondArray) {
-  const commonElements = [];
-
-
-firstArray.forEach(elements => {
-if ( elements === secondArray ){
-  commonElements.push(elements);
-}
-  
-})
-
-  return commonElements;
-
-}
 
 
 
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     genres: ["adventure", "history"],
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     genres: ["fiction", "mysticism"],
+//   },
+//   {
+//     title: "Redder Than Blood",
+//     author: "Tanith Lee",
+//     genres: ["horror", "mysticism", "adventure"],
+//   },
+// ];
+// // Change code below this line
+// const allGenres = books.flatMap(({genres}) => genres);
+// const uniqueGenres = allGenres.filter((val , ind , arr) => arr.indexOf(val) === ind);
+
+// console.log(allGenres);
+// console.log(uniqueGenres);
 
 
 
-console.log(getCommonElements([1, 2, 3], [2, 4]))
-console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
-console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
+
+// //  array.indexOf(course) === index
+
+
+
+// const players = [
+//   { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+//   { name: "Poly", playtime: 469, gamesPlayed: 2 },
+//   { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+//   { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+// ];
+// // Change code below this line
+// // const total = players.playtime / players.gamesPlayed
+
+
+// const totalAveragePlaytimePerGame = players.reduce((sum, numb) => sum + numb.playtime  / numb.gamesPlayed , 0)
+
+// // const totalAveragePlaytimePerGame = players.reduce((acc, play) => {
+// // return acc + play.playtime / play.gamesPlayed
+// // }, 0);
+
+
+
+//   console.log(totalAveragePlaytimePerGame);
+
+
+
+
+
+const titleEl = document.createElement('h1');
+titleEl.classList.add('page-title');
+titleEl.textContent = 'لَآ أَعْبُدُ مَا تَعْبُدُونَ';
+console.log(titleEl);
+document.body.appendChild(titleEl);
+const imageEl = document.createElement('img');
+imageEl.width = 300;
+
+imageEl.src = '	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YePj_yrMUR-89tpxdx7lRvdfszNwosSlvw&usqp=CAU'
+document.body.appendChild(imageEl);
+
+
