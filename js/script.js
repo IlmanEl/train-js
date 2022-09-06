@@ -400,8 +400,51 @@
 
 
 
-flat
- flatmap
+// flat
+// flatmap
+// sort
+
+
+
+// const  filterAr/ray(numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach(number  => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   // Change code above this line
+  
+//   return filteredNumbers;
+// }
+
+
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach( number => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+
+//   // Change code above this line
+//     return filteredNumbers;
+    
+// const  filterArray(numbers, value) => {
+//   const filteredNumbers = [];
+
+//     numbers.forEach(number => {
+//         if (number > value) {
+//             filteredNumbers.push(number);
+//         }
+//     })
+
+//   // Change code above this line
+//   return filteredNumbers;
+// }
 
 
 
@@ -409,9 +452,26 @@ flat
 
 
 
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+
+
+firstArray.forEach(elements => {
+if ( elements === secondArray ){
+  commonElements.push(elements);
+}
+  
+})
+
+  return commonElements;
+
+}
 
 
 
 
 
 
+console.log(getCommonElements([1, 2, 3], [2, 4]))
+console.log(getCommonElements([1, 2, 3], [10, 20, 30]));
+console.log(getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]));
