@@ -510,16 +510,76 @@
 
 
 
-const titleEl = document.createElement('h1');
-titleEl.classList.add('page-title');
-titleEl.textContent = 'لَآ أَعْبُدُ مَا تَعْبُدُونَ';
-console.log(titleEl);
+// const titleEl = document.createElement('h1');
+// titleEl.classList.add('page-title');
+// titleEl.textContent = 'لَآ أَعْبُدُ مَا تَعْبُدُونَ';
+// // console.log(titleEl);
 
-const imageEl = document.createElement('img');
-imageEl.width = 300;
+// const imageEl = document.createElement('img');
+// imageEl.width = 300;
 
-imageEl.src = '	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YePj_yrMUR-89tpxdx7lRvdfszNwosSlvw&usqp=CAU'
-// document.body.appendChild(imageEl);
+// imageEl.src = '	https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7YePj_yrMUR-89tpxdx7lRvdfszNwosSlvw&usqp=CAU'
+// // document.body.appendChild(imageEl);
 
-// document.body.appendChild(titleEl);
-document.body.append(imageEl, titleEl)
+// // document.body.appendChild(titleEl);
+// document.body.append(titleEl ,imageEl)
+
+
+
+// const books = [
+//   {
+//     title: "The Last Kingdom",
+//     author: "Bernard Cornwell",
+//     rating: 8.38,
+//   },
+//   {
+//     title: "Beside Still Waters",
+//     author: "Robert Sheckley",
+//     rating: 8.51,
+//   },
+//   {
+//     title: "The Dream of a Ridiculous Man",
+//     author: "Fyodor Dostoevsky",
+//     rating: 7.75,
+//   },
+//   { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+//   { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+// ];
+// // Change code below this line
+
+// const sortedByAuthorName = [...books];
+
+// const sortedByReversedAuthorName = books;
+
+// const sortedByAscendingRating = books;
+
+// const sortedByDescentingRating = books;
+
+
+
+
+
+
+
+
+// const dog = Object.create
+
+// class Car {
+//   // Change code below this line
+// constructor( brand , model , price ) {
+//     // Инициализация свойств экземпляра
+// brand,
+// model,
+// price,
+     
+     
+  
+//   }
+
+
+
+//   // Change code above this line
+// }
+
+
+
