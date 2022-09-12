@@ -663,61 +663,92 @@
 // const btns = document.querySelectorAll('li');
 // console.log(btns);
 
-const tagsContainer= document.querySelector('.tags');
-tagsContainer.addEventListener('click', onClick);
-const selectedTags = new Set();
+// const tagsContainer= document.querySelector('.tags');
+// tagsContainer.addEventListener('click', onClick);
+// const selectedTags = new Set();
 
-function onClick(evt) {
-    const nextActiveBatton = evt.target
-    if (nextActiveBatton.nodeName !== 'BUTTON') {
-        return
-    }
+// function onClick(evt) {
+//     const nextActiveBatton = evt.target
+//     if (nextActiveBatton.nodeName !== 'BUTTON') {
+//         return
+//     }
  
 
-   const exMachine = nextActiveBatton.classList.toggle('tags__btn--active')
+//    const exMachine = nextActiveBatton.classList.toggle('tags__btn--active')
 
-    selectedTags.add(nextActiveBatton.dataset.value);
+//     selectedTags.add(nextActiveBatton.dataset.value);
     
-    if (!exMachine) {
-        selectedTags.delete(nextActiveBatton.dataset.value);
-    }
-    // exMachine?.selectedTags.delete(nextActiveBatton.dataset.value);
+//     if (!exMachine) {
+//         selectedTags.delete(nextActiveBatton.dataset.value);
+//     }
+//     // exMachine?.selectedTags.delete(nextActiveBatton.dataset.value);
 
-    console.log(selectedTags);
-
-
+//     console.log(selectedTags);
 
 
-    // console.log('Нажатие на  кнопку прошло успешно))')
-    // console.log(evt.target); 
+
+
+//     // console.log('Нажатие на  кнопку прошло успешно))')
+//     // console.log(evt.target); 
    
-//    const currentActiveButton = document.querySelector('.tags__btn--active')
-//     // console.log(currentActiveButton); 
+// //    const currentActiveButton = document.querySelector('.tags__btn--active')
+// //     // console.log(currentActiveButton); 
    
-//     nextActiveBatton.classList.add('tags__btn--active');
-//     const selectedTag = nextActiveBatton.dataset.value
+// //     nextActiveBatton.classList.add('tags__btn--active');
+// //     const selectedTag = nextActiveBatton.dataset.value
 
-//     if (currentActiveButton) {
-//         currentActiveButton.classList.remove('tags__btn--active')  
-//     };
+// //     if (currentActiveButton) {
+// //         currentActiveButton.classList.remove('tags__btn--active')  
+// //     };
 
-//     currentActiveButton?.classList.remove('tags__btn--active')  
+// //     currentActiveButton?.classList.remove('tags__btn--active')  
 
-//     console.log(selectedTag)
-};
-
-
+// //     console.log(selectedTag)
+// };
 
 
+const colors = [
+    { hex: '#f44336', rgb: '224,67,54' },
+    { hex: '#e91e63', rgb: '238,38,99' },
+    { hex: '#9c27b8', rgb: '156,37,53' },
+    { hex: '#3fp1b5', rgb: '341,57,43' },
+    { hex: '#k466d8', rgb: '214,67,54' },
+    { hex: '#f4e536', rgb: '154,67,54' },
+    { hex: '#f44336', rgb: '104,67,54' },
+    { hex: '#f12333', rgb: '84,6,54' },
+    { hex: '#f44336', rgb: '04,120,54' },
+    { hex: '#f1338b', rgb: '4,153,54' },
+    { hex: '#2cz45w', rgb: '0,62,54' },
+    { hex: '#1red36', rgb: '54,60,54' },
+    { hex: '#f41116', rgb: '24,7,54' },
+    { hex: '#r74336', rgb: '22,12,54' },
+    { hex: '#f44336', rgb: '104,112,54' },
+    { hex: '#f44336', rgb: '100,171,54' },
+    { hex: '#f44336', rgb: '111,129,54' },
+    { hex: '#1v4336', rgb: '132,241,54' },
+    { hex: '#f15336', rgb: '145,234,54' },
+    { hex: '#d4f821', rgb: '153,42,54' },
+    { hex: '#e45r65', rgb: '155,132,54' },
+    { hex: '#f44336', rgb: '51,132,54' },
+    { hex: '#q84336', rgb: '34,6,54' },
+    
+];
+
+const paletteContainer = document.querySelector(".js-palette")
+console.log(paletteContainer)
+
+ 
 
 
+// console.log(createColorCardsMarkup(colors));
 
+// function createColorCardsMarkup(colors) {
+//     return colors.map( ({hex, rgb}) => {
+//         return `<div class="color-card">                                                     < div                                                           class="color-swatch"                                                    data - hex="${hex}"                                                    data - rgb="${rgb}"                                                 style = "background-color: #955014"                                                                ></div >                                                                <div  class="color-meta"                                                <p>HEX: ${hex}</p>                                                   <p>RGB: ${rgb}</p>                                                     </div >                                                                 </div > `
+//     }).join('');
+    
 
-
-
-
-
-
+// };
 
 
 
