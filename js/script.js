@@ -708,50 +708,88 @@
 
 
 const colors = [
-    { hex: '#f44336', rgb: '224,67,54' },
-    { hex: '#e91e63', rgb: '238,38,99' },
-    { hex: '#9c27b8', rgb: '156,37,53' },
-    { hex: '#3fp1b5', rgb: '341,57,43' },
-    { hex: '#k466d8', rgb: '214,67,54' },
-    { hex: '#f4e536', rgb: '154,67,54' },
-    { hex: '#f44336', rgb: '104,67,54' },
-    { hex: '#f12333', rgb: '84,6,54' },
-    { hex: '#f44336', rgb: '04,120,54' },
-    { hex: '#f1338b', rgb: '4,153,54' },
-    { hex: '#2cz45w', rgb: '0,62,54' },
-    { hex: '#1red36', rgb: '54,60,54' },
-    { hex: '#f41116', rgb: '24,7,54' },
-    { hex: '#r74336', rgb: '22,12,54' },
-    { hex: '#f44336', rgb: '104,112,54' },
-    { hex: '#f44336', rgb: '100,171,54' },
-    { hex: '#f44336', rgb: '111,129,54' },
-    { hex: '#1v4336', rgb: '132,241,54' },
-    { hex: '#f15336', rgb: '145,234,54' },
-    { hex: '#d4f821', rgb: '153,42,54' },
-    { hex: '#e45r65', rgb: '155,132,54' },
-    { hex: '#f44336', rgb: '51,132,54' },
-    { hex: '#q84336', rgb: '34,6,54' },
+    // { hex: '#dfa801', rgb: '224,67,54' },
+    // { hex: '#e91e63', rgb: '238,38,99' },
+    // { hex: '#9c27b8', rgb: '156,37,53' },
+    // { hex: '#679f58', rgb: '311,57,43' },
+    // { hex: '#5f9ea0', rgb: '214,67,54' },
+    // { hex: '#0A75AD', rgb: '10,117,173' },
+    // { hex: '#b95355', rgb: '104,67,54' },
+    // { hex: '#898378', rgb: '84,6,54' },
+    // { hex: '#9b4848', rgb: '04,120,544' },
+    // { hex: '#b3cee5', rgb: '4,153,54' },
+    { hex: '#f6eee0', rgb: '0,62,54' },
+    { hex: '#324c65', rgb: '54,60,54' },
+    { hex: '#644123', rgb: '24,7,54' },
+    { hex: '#556f55', rgb: '22,12,54' },
+    { hex: '#4a4aa2', rgb: '104,112,54' },
+    { hex: '#f4e0a5', rgb: '100,171,54' },
+    { hex: '#c86060', rgb: '111,129,54' },
+    { hex: '#c4a6d4', rgb: '132,241,54' },
+    { hex: '#a56b9d', rgb: '145,234,54' },
+    { hex: '#869ea7', rgb: '153,42,54' },
+    { hex: '#c8b18d', rgb: '155,132,54' },
+    { hex: '#f49c14', rgb: '51,132,54' },
+    { hex: '#db560d', rgb: '34,6,54' },
+    { hex: '#0f8880', rgb: '86,186,90' },
+    { hex: '#8b9df2', rgb: '139,157,242' },
+
     
 ];
 
-const paletteContainer = document.querySelector(".js-palette")
-console.log(paletteContainer)
-
- 
 
 
-// console.log(createColorCardsMarkup(colors));
+const paletteContainer = document.querySelector('.js-palette');
+const cardsMarkup = createColorCardsMarkup(colors);
 
-// function createColorCardsMarkup(colors) {
-//     return colors.map( ({hex, rgb}) => {
-//         return `<div class="color-card">                                                     < div                                                           class="color-swatch"                                                    data - hex="${hex}"                                                    data - rgb="${rgb}"                                                 style = "background-color: #955014"                                                                ></div >                                                                <div  class="color-meta"                                                <p>HEX: ${hex}</p>                                                   <p>RGB: ${rgb}</p>                                                     </div >                                                                 </div > `
-//     }).join('');
+paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+
+paletteContainer.addEventListener('click', onPaletteContainerClick);
+
+
     
+function createColorCardsMarkup(colors) {
+    return colors.map(({ hex, rgb }) => {
+        return `
+<div class="color-card">
+ <div
+   class="color-swatch"
+   data-hex="${hex}"
+   data-rgb="${rgb}"
+   style="background-color: ${hex}"
+ ></div>
+ <div class="color-meta">
+   <p>HEX: ${hex}</p>
+   <p>RGB: ${rgb}</p>
+ </div> 
+</div> 
+`;
+    }).join('');
+};
 
-// };
 
 
+function onPaletteContainerClick(evt) {
+    const isColorSwatchEl = evt.target.classList.contains('color-swatch');
 
 
+    if (!isColorSwatchEl) {
+        return;
+    }
 
+    const currentActiveCard = document.querySelector('.color-card.is-active');
 
+    if (currentActiveCard) {
+        currentActiveCard.classList.remove('is-active');
+}
+
+    const swatchEl = evt.target;
+    const parentColorCard = swatchEl.closest('.color-card');
+
+    parentColorCard.classList.add('is-active');
+
+    document.body.style.backgroundColor = swatchEl.dataset.hex
+
+console.log(swatchEl)
+
+}
