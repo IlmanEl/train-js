@@ -583,3 +583,144 @@
 
 
 
+
+
+// Напиши скрипт который:
+
+// Посчитает и выведет в консоль количество категорий в ul#categories, то есть элементов li.item.
+// Для каждого элемента li.item в списке ul#categories, найдет и выведет в консоль текст заголовка элемента (тега <h2>) и количество элементов в категории (всех вложенных в него <li>).
+// В результате, в консоли будут выведены такие сообщения.
+
+// const founder = document.querySelector('#categories');
+// console.log(founder)
+
+// const foundered = document.querySelectorAll('.item')
+// console.log(foundered)
+
+// const ref = document.querySelector('li.item')
+// console.log(ref)
+
+// const refs = document.querySelectorAll('.item.Animals')
+// console.log(refs)
+
+// const founderedd = document.querySelector('Cat')
+// console.log(founderedd)
+
+// const foundereddd = document.querySelector('item.Cat')
+// console.log(foundereddd)
+
+// const founderedddd = document.querySelector('.Cat')
+// console.log(founderedddd)
+
+
+
+// NUMBER1
+
+// const listEl = document.querySelector("#categories");
+// console.log(listEl);
+
+// const itemEl = document.querySelectorAll(".item");
+// console.log(`Number of categories: `, itemEl.length);
+
+// const titleEl = document.querySelectorAll("h2");
+// console.log(titleEl)
+// const newListEl = document.querySelectorAll(".item ul");
+// console.log(newListEl)
+// for (let i = 0; i < titleEl.length; i += 1) {
+//   console.log(`Category: `, titleEl[i].textContent);
+//   console.log(`Elements: `, newListEl[i].children.length);
+// }
+
+// NUMBER2
+
+// const itemRefs = document.querySelectorAll(".item");
+// console.log("Number of categories: ", itemRefs.length);
+// itemRefs.forEach((element) => {
+//   const titleRefs = element.querySelector("h2").textContent;
+//   console.log("Category: ", titleRefs);
+//   const secondItemRefs = element.querySelectorAll("li");
+//   console.log("Elements: ", secondItemRefs.length);
+// });
+
+// NUMBER3
+
+// const listRefs = document.querySelector("#categories").children;
+// console.log("Number of categories: ", listRefs.length);
+
+// [...listRefs].forEach((element) => {
+//   const title = element.querySelector("h2").textContent;
+//   console.log("Category: ", title);
+
+//   const lengthEl = element.querySelectorAll("li").length;
+//   console.log("Elements: ", lengthEl);
+// });
+
+
+
+
+
+// console.log(tagsContainer);
+// const btns = document.querySelectorAll('li');
+// console.log(btns);
+
+const tagsContainer= document.querySelector('.tags');
+tagsContainer.addEventListener('click', onClick);
+const selectedTags = new Set();
+
+function onClick(evt) {
+    const nextActiveBatton = evt.target
+    if (nextActiveBatton.nodeName !== 'BUTTON') {
+        return
+    }
+ 
+
+   const exMachine = nextActiveBatton.classList.toggle('tags__btn--active')
+
+    selectedTags.add(nextActiveBatton.dataset.value);
+    
+    if (!exMachine) {
+        selectedTags.delete(nextActiveBatton.dataset.value);
+    }
+    // exMachine?.selectedTags.delete(nextActiveBatton.dataset.value);
+
+    console.log(selectedTags);
+
+
+
+
+    // console.log('Нажатие на  кнопку прошло успешно))')
+    // console.log(evt.target); 
+   
+//    const currentActiveButton = document.querySelector('.tags__btn--active')
+//     // console.log(currentActiveButton); 
+   
+//     nextActiveBatton.classList.add('tags__btn--active');
+//     const selectedTag = nextActiveBatton.dataset.value
+
+//     if (currentActiveButton) {
+//         currentActiveButton.classList.remove('tags__btn--active')  
+//     };
+
+//     currentActiveButton?.classList.remove('tags__btn--active')  
+
+//     console.log(selectedTag)
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
