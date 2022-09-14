@@ -790,7 +790,7 @@ function onPaletteContainerClick(evt) {
 
     document.body.style.backgroundColor = swatchEl.dataset.hex
 
-console.log(swatchEl)
+// console.log(swatchEl)
 
 }
 
@@ -847,9 +847,6 @@ function onFilterChange(evt) {
     refs.list.innerHTML = listItemsMarkup;
 
 }
-
-
-
 
 
 
