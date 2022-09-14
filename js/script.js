@@ -846,7 +846,16 @@ function onFilterChange(evt) {
     const listItemsMarkup = createListItemsMarkup(filteredItems);
     refs.list.innerHTML = listItemsMarkup;
 
-};
+}
+
+
+
+
+
+
+
+
+
 
 
 
