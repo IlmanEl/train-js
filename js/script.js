@@ -848,20 +848,3 @@ function onFilterChange(evt) {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
