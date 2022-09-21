@@ -689,162 +689,166 @@
 
 
 //     // console.log('Нажатие на  кнопку прошло успешно))')
-//     // console.log(evt.target); 
+//     // console.log(evt.target);
    
 // //    const currentActiveButton = document.querySelector('.tags__btn--active')
-// //     // console.log(currentActiveButton); 
+// //     // console.log(currentActiveButton);
    
 // //     nextActiveBatton.classList.add('tags__btn--active');
 // //     const selectedTag = nextActiveBatton.dataset.value
 
 // //     if (currentActiveButton) {
-// //         currentActiveButton.classList.remove('tags__btn--active')  
+// //         currentActiveButton.classList.remove('tags__btn--active')
 // //     };
 
-// //     currentActiveButton?.classList.remove('tags__btn--active')  
+// //     currentActiveButton?.classList.remove('tags__btn--active')
 
 // //     console.log(selectedTag)
 // };
 
 
-const colors = [
-    // { hex: '#dfa801', rgb: '224,67,54' },
-    // { hex: '#e91e63', rgb: '238,38,99' },
-    // { hex: '#9c27b8', rgb: '156,37,53' },
-    // { hex: '#679f58', rgb: '311,57,43' },
-    // { hex: '#5f9ea0', rgb: '214,67,54' },
-    // { hex: '#0A75AD', rgb: '10,117,173' },
-    // { hex: '#b95355', rgb: '104,67,54' },
-    // { hex: '#898378', rgb: '84,6,54' },
-    // { hex: '#9b4848', rgb: '04,120,544' },
-    // { hex: '#b3cee5', rgb: '4,153,54' },
-    { hex: '#f6eee0', rgb: '0,62,54' },
-    { hex: '#324c65', rgb: '54,60,54' },
-    { hex: '#644123', rgb: '24,7,54' },
-    { hex: '#556f55', rgb: '22,12,54' },
-    { hex: '#4a4aa2', rgb: '104,112,54' },
-    { hex: '#f4e0a5', rgb: '100,171,54' },
-    { hex: '#c86060', rgb: '111,129,54' },
-    { hex: '#c4a6d4', rgb: '132,241,54' },
-    { hex: '#a56b9d', rgb: '145,234,54' },
-    { hex: '#869ea7', rgb: '153,42,54' },
-    { hex: '#c8b18d', rgb: '155,132,54' },
-    { hex: '#f49c14', rgb: '51,132,54' },
-    { hex: '#db560d', rgb: '34,6,54' },
-    { hex: '#0f8880', rgb: '86,186,90' },
-    { hex: '#8b9df2', rgb: '139,157,242' },
+// const colors = [
+//     // { hex: '#dfa801', rgb: '224,67,54' },
+//     // { hex: '#e91e63', rgb: '238,38,99' },
+//     // { hex: '#9c27b8', rgb: '156,37,53' },
+//     // { hex: '#679f58', rgb: '311,57,43' },
+//     // { hex: '#5f9ea0', rgb: '214,67,54' },
+//     // { hex: '#0A75AD', rgb: '10,117,173' },
+//     // { hex: '#b95355', rgb: '104,67,54' },
+//     // { hex: '#898378', rgb: '84,6,54' },
+//     // { hex: '#9b4848', rgb: '04,120,544' },
+//     // { hex: '#b3cee5', rgb: '4,153,54' },
+//     { hex: '#f6eee0', rgb: '0,62,54' },
+//     { hex: '#324c65', rgb: '54,60,54' },
+//     { hex: '#644123', rgb: '24,7,54' },
+//     { hex: '#556f55', rgb: '22,12,54' },
+//     { hex: '#4a4aa2', rgb: '104,112,54' },
+//     { hex: '#f4e0a5', rgb: '100,171,54' },
+//     { hex: '#c86060', rgb: '111,129,54' },
+//     { hex: '#c4a6d4', rgb: '132,241,54' },
+//     { hex: '#a56b9d', rgb: '145,234,54' },
+//     { hex: '#869ea7', rgb: '153,42,54' },
+//     { hex: '#c8b18d', rgb: '155,132,54' },
+//     { hex: '#f49c14', rgb: '51,132,54' },
+//     { hex: '#db560d', rgb: '34,6,54' },
+//     { hex: '#0f8880', rgb: '86,186,90' },
+//     { hex: '#8b9df2', rgb: '139,157,242' },
 
     
-];
+// ];
 
 
 
-const paletteContainer = document.querySelector('.js-palette');
-const cardsMarkup = createColorCardsMarkup(colors);
+// const paletteContainer = document.querySelector('.js-palette');
+// const cardsMarkup = createColorCardsMarkup(colors);
 
-paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
+// paletteContainer.insertAdjacentHTML('beforeend', cardsMarkup);
 
-paletteContainer.addEventListener('click', onPaletteContainerClick);
+// paletteContainer.addEventListener('click', onPaletteContainerClick);
 
 
     
-function createColorCardsMarkup(colors) {
-    return colors.map(({ hex, rgb }) => {
-        return `
-<div class="color-card">
- <div
-   class="color-swatch"
-   data-hex="${hex}"
-   data-rgb="${rgb}"
-   style="background-color: ${hex}"
- ></div>
- <div class="color-meta">
-   <p>HEX: ${hex}</p>
-   <p>RGB: ${rgb}</p>
- </div> 
-</div> 
-`;
-    }).join('');
-};
+// function createColorCardsMarkup(colors) {
+//     return colors.map(({ hex, rgb }) => {
+//         return `
+// <div class="color-card">
+//  <div
+//    class="color-swatch"
+//    data-hex="${hex}"
+//    data-rgb="${rgb}"
+//    style="background-color: ${hex}"
+//  ></div>
+//  <div class="color-meta">
+//    <p>HEX: ${hex}</p>
+//    <p>RGB: ${rgb}</p>
+//  </div>
+// </div>
+// `;
+//     }).join('');
+// };
 
 
 
-function onPaletteContainerClick(evt) {
-    const isColorSwatchEl = evt.target.classList.contains('color-swatch');
+// function onPaletteContainerClick(evt) {
+//     const isColorSwatchEl = evt.target.classList.contains('color-swatch');
 
 
-    if (!isColorSwatchEl) {
-        return;
-    }
+//     if (!isColorSwatchEl) {
+//         return;
+//     }
 
-    const currentActiveCard = document.querySelector('.color-card.is-active');
+//     const currentActiveCard = document.querySelector('.color-card.is-active');
 
-    if (currentActiveCard) {
-        currentActiveCard.classList.remove('is-active');
-}
+//     if (currentActiveCard) {
+//         currentActiveCard.classList.remove('is-active');
+// }
 
-    const swatchEl = evt.target;
-    const parentColorCard = swatchEl.closest('.color-card');
+//     const swatchEl = evt.target;
+//     const parentColorCard = swatchEl.closest('.color-card');
 
-    parentColorCard.classList.add('is-active');
+//     parentColorCard.classList.add('is-active');
 
-    document.body.style.backgroundColor = swatchEl.dataset.hex
+//     document.body.style.backgroundColor = swatchEl.dataset.hex
 
-// console.log(swatchEl)
+// // console.log(swatchEl)
 
-}
-
-
-
+// }
 
 
 
-const tech = [
-    { label: 'HTML' },
-    { label: 'JavaScript' },
-    { label: 'Css' },
-    { label: 'C++' },
-    { label: 'React' },
-    { label: 'Node' },
-    { label: 'Rust' },
-    { label: 'MangoDb' },
-    { label: 'Vue' },
-    { label: 'Type Script' },
-    { label: 'Python' },
-    { label: 'PHP' },
-    { label: 'C#' },
-    { label: 'Ruby,' },
-    { label: 'Java' },
+
+
+
+// const tech = [
+//     { label: 'HTML' },
+//     { label: 'JavaScript' },
+//     { label: 'Css' },
+//     { label: 'C++' },
+//     { label: 'React' },
+//     { label: 'Node' },
+//     { label: 'Rust' },
+//     { label: 'MangoDb' },
+//     { label: 'Vue' },
+//     { label: 'Type Script' },
+//     { label: 'Python' },
+//     { label: 'PHP' },
+//     { label: 'C#' },
+//     { label: 'Ruby,' },
+//     { label: 'Java' },
     
 
-] 
+// ]
 
 
 
-const refs = {
-    list: document.querySelector('.js-list'),
-    input: document.querySelector('#filter')
-}
+// const refs = {
+//     list: document.querySelector('.js-list'),
+//     input: document.querySelector('#filter')
+// }
 
-refs.input.addEventListener('input', onFilterChange);
+// refs.input.addEventListener('input', onFilterChange);
 
-const listItemsMarkup = createListItemsMarkup(tech)
+// const listItemsMarkup = createListItemsMarkup(tech)
 
-refs.list.innerHTML = listItemsMarkup;
+// refs.list.innerHTML = listItemsMarkup;
 
 
-function createListItemsMarkup(items) {
-    return items.map(item => `<li>${item.label}</li>`).join('');
-};
+// function createListItemsMarkup(items) {
+//     return items.map(item => `<li>${item.label}</li>`).join('');
+// };
 
-function onFilterChange(evt) {
-    const filter = evt.target.value.toLowerCase();
+// function onFilterChange(evt) {
+//     const filter = evt.target.value.toLowerCase();
 
-    const filteredItems = tech.filter(t => t.label.toLowerCase().includes(filter)
-    );
+//     const filteredItems = tech.filter(t => t.label.toLowerCase().includes(filter)
+//     );
 
-    const listItemsMarkup = createListItemsMarkup(filteredItems);
-    refs.list.innerHTML = listItemsMarkup;
+//     const listItemsMarkup = createListItemsMarkup(filteredItems);
+//     refs.list.innerHTML = listItemsMarkup;
 
-}
+// }
+
+
+
+
 
