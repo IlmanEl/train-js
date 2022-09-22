@@ -897,3 +897,13 @@ setTimeout(() => {
 const ilman = 0;
 
 
+
+console.log(
+    '%c Приветствую вас Ильман!',
+    'color: green; font-size: 47px;',
+);
+
+console.log(
+    '%c приятной работы в VScode)',
+    'color: brown; font-size: 37px;',
+);
