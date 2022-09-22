@@ -870,10 +870,17 @@ function onFetchError(error) {
 
 
 
+
+
+
 const makePromise = () => {
     return new Promise((resolve, reject) => {
+        const passed = Math.random() > 0.5
+        if (passed) {
          resolve('ку-ку');
+        }
+        reject('error')
     })
 };
 
-makePromise().then(result => console.log(result));
+makePromise().then(result => console.log(result)).catch(error => console.log(error));
