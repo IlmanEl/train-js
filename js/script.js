@@ -876,11 +876,20 @@ function onFetchError(error) {
 const makePromise = () => {
     return new Promise((resolve, reject) => {
         const passed = Math.random() > 0.5
+
+        setTimeout(() => {
         if (passed) {
          resolve('ку-ку');
         }
         reject('error')
     })
+        }, 2000);
 };
 
+
+
 makePromise().then(result => console.log(result)).catch(error => console.log(error));
+
+setTimeout(() => {
+    console.log('strange work of Timeout');
+        }, 2000);
