@@ -860,10 +860,20 @@ fetchPokemonById(Math.round(Math.random() * (100 - 1 ) + 1)).then(onFetchSuccess
 
 
 function onFetchSuccess(pokemon) {
-    console.log(pokemon.name);
+    console.log(pokemon);
 };
     
     
 function onFetchError(error) {
-    console.error(  error );
+    console.log(error);
 };
+
+
+
+const makePromise = () => {
+    return new Promise((resolve, reject) => {
+         resolve('ку-ку');
+    })
+};
+
+makePromise().then(result => console.log(result));
