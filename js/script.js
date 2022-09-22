@@ -892,4 +892,8 @@ makePromise().then(result => console.log(result)).catch(error => console.log(err
 
 setTimeout(() => {
     console.log('strange work of Timeout');
-        }, 2000);
+}, 2000);
+        
+const ilman = 0;
+
+
