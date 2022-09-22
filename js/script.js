@@ -849,6 +849,21 @@
 // }
 
 
+const fetchPokemonById = id => {
+    return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
+};
+
+fetchPokemonById(Math.round(Math.random() * (100 - 1 ) + 1)).then(onFetchSuccess).catch(onFetchError);
 
 
 
+
+
+function onFetchSuccess(pokemon) {
+    console.log(pokemon.name);
+};
+    
+    
+function onFetchError(error) {
+    console.error(  error );
+};
