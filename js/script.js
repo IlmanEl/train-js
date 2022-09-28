@@ -853,7 +853,7 @@ const fetchPokemonById = id => {
     return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
 };
 
-fetchPokemonById(Math.round(Math.random() * (100 - 1 ) + 1)).then(onFetchSuccess).catch(onFetchError);
+fetchPokemonById(Math.round(Math.random() * (900 - 1 ) + 1)).then(onFetchSuccess).catch(onFetchError);
 
 
 
@@ -907,3 +907,13 @@ console.log(
     '%c приятной работы в VScode)',
     'color: brown; font-size: 37px;',
 );
+
+
+
+fetch('https://pokeapi.co/api/v2/pokemon/904').then(response => {
+    return response.json();
+}).then(pokemon => {
+    console.log(pokemon);
+}).catch(error => {
+    console.log(error)
+});
