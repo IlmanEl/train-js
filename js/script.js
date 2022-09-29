@@ -910,10 +910,13 @@ console.log(
 
 
 
-fetch('https://pokeapi.co/api/v2/pokemon/904').then(response => {
+fetch('https://pokeapi.co/api/v2/pokemon/2')
+    .then(response => {
     return response.json();
-}).then(pokemon => {
+    })
+    .then(pokemon => {
     console.log(pokemon);
-}).catch(error => {
+    })
+    .catch(error => {
     console.log(error)
 });
