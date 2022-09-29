@@ -910,7 +910,7 @@ console.log(
 
 
 
-fetch('https://pokeapi.co/api/v2/pokemon/22')
+fetch('https://pokeapi.co/api/v2/pokemon/2')
     .then(response => {
     return response.json();
     })
