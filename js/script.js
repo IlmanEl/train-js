@@ -849,52 +849,52 @@
 // }
 
 
-const fetchPokemonById = id => {
-    return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
-};
+// const fetchPokemonById = id => {
+//     return fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(r => r.json());
+// };
 
-fetchPokemonById(Math.round(Math.random() * (900 - 1 ) + 1)).then(onFetchSuccess).catch(onFetchError);
-
-
+// fetchPokemonById(Math.round(Math.random() * (900 - 1 ) + 1)).then(onFetchSuccess).catch(onFetchError);
 
 
 
-function onFetchSuccess(pokemon) {
-    console.log(pokemon);
-};
+
+
+// function onFetchSuccess(pokemon) {
+//     console.log(pokemon);
+// };
     
     
-function onFetchError(error) {
-    console.log(error);
-};
+// function onFetchError(error) {
+//     console.log(error);
+// };
 
 
 
 
 
 
-const makePromise = () => {
-    return new Promise((resolve, reject) => {
-        const passed = Math.random() > 0.5
+// const makePromise = () => {
+//     return new Promise((resolve, reject) => {
+//         const passed = Math.random() > 0.5
 
-        setTimeout(() => {
-        if (passed) {
-         resolve('ку-ку');
-        }
-        reject('error')
-    })
-        }, 2000);
-};
+//         setTimeout(() => {
+//         if (passed) {
+//          resolve('ку-ку');
+//         }
+//         reject('error')
+//     })
+//         }, 2000);
+// };
 
 
 
-makePromise().then(result => console.log(result)).catch(error => console.log(error));
+// makePromise().then(result => console.log(result)).catch(error => console.log(error));
 
-setTimeout(() => {
-    console.log('strange work of Timeout');
-}, 2000);
+// setTimeout(() => {
+    // console.log('strange work of Timeout');
+// }, 2000);
         
-const ilman = 0;
+// const ilman = 0;
 
 
 
@@ -910,13 +910,21 @@ console.log(
 
 
 
-fetch('https://pokeapi.co/api/v2/pokemon')
-    .then(response => {
-    return response.json();
-    })
-    .then(pokemon => {
-    console.log(pokemon);
-    })
-    .catch(error => {
-    console.log(error)
-});
+// fetch('https://pokeapi.co/api/v2/pokemon')
+//     .then(response => {
+//     return response.json();
+//     })
+//     .then(pokemon => {
+//     console.log(pokemon);
+//     })
+//     .catch(error => {
+//     console.log(error)
+// });
+
+
+
+
+
+
+
+
